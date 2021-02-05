@@ -3,27 +3,30 @@ const Schema = mongoose.Schema;
 
 const Item = new Schema(
     {
-        name: {
+        ISBN: {
             type: String,
             required: true
         },
-        daysOfWeek: {
-            type: Map,
-            of: String,
-            required: false
-        },
-        timeframeNote: {
+        title: {
             type: String,
-            required: false
+            required: true
         },
-        priority: {
+        author: {
+            type: String,
+            required: true
+        },
+        year: {
             type: Number,
             required: false
         },
-        content: {
+        publisher: {
             type: String,
             required: true
         },
+        copies:{
+            type: Number,
+            required: true
+        }
     },
     { timestamps: true },
 );

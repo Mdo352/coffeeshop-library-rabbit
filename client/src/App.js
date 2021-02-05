@@ -32,6 +32,7 @@ class App extends Component {
 
         const publicViews = (
             <Switch>
+                {/* <Route exact path='/' component= {NavBar}/> */}
                 <Route exact path={routes.HOME} component={Welcome} />
                 <Route exact path={routes.ITEMS} component={ItemsList} />
                 <Route exact path={`${routes.ITEMS}/react-table-v6`} component={ItemsTable} />

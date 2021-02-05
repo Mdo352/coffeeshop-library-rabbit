@@ -84,61 +84,65 @@ class ItemInsert extends Component {
          */
         super(props);
         this.state = {
-            name: '',
-            daysOfWeek: {},
-            timeframeNote: '',
-            priority: 0,
-            content: '',
+            ISBN: '',
+            title: '',
+            author: '',
+            year: '',
+            publisher: '',
+            image_url_small: '',
+            image_url_med: '',
+            image_url_large: '',
+            copies: 0,
+            isAvailable: 'False',
         };
     }
 
-    handleChangeInputName = async event => {
-        const name = event.target.value;
-        this.setState({ name });
+    handleChangeInputISBN = async event => {
+        const ISBN = event.target.value;
+        this.setState({ ISBN });
+    }
+    handleChangeInputTitle = async event => {
+        const title = event.target.value;
+        this.setState({ title });
+    }
+    handleChangeInputAuthor = async event => {
+        const author = event.target.value;
+        this.setState({ author });
+    }
+    handleChangeInputYear = async event => {
+        const year = event.target.value;
+        this.setState({ year });
+    }
+    handleChangeInputPublisher = async event => {
+        const publisher = event.target.value;
+        this.setState({ publisher });
     }
 
-    handleChangeDays = async event => {
-        const { checked, value } = event.target;
-        const { daysOfWeek } = this.state;
-        const { DAYS_OF_WEEK } = shared;
-
-        if (checked && !daysOfWeek[value]) {
-            daysOfWeek[value] = DAYS_OF_WEEK[value];
-        } else if (!checked && daysOfWeek[value]) {
-            delete daysOfWeek[value];
-        }
-        this.setState({ daysOfWeek });
-    }
-
-    handleChangeInputTimeframe = async event => {
-        const timeframeNote = event.target.value;
-        this.setState({ timeframeNote });
-    }
-
-    handleChangeInputPriority = async event => {
-        const priority = event.target.validity.valid
+    handleChangeInputCopies = async event => {
+        const copies = event.target.validity.valid
             ? event.target.value
-            : this.state.priority;
+            : this.state.copies;
 
-        this.setState({ priority });
+        this.setState({ copies });
     }
 
-    handleChangeInputContent = async event => {
-        const content = event.target.value;
-        this.setState({ content });
+    handleChangeInputIsAvailable = async event => {
+        const isAvailable = event.target.value;
+        this.setState({ isAvailable });
     }
 
     handleInsertItem = event => {
         event.preventDefault();
 
         const {
-            name,
-            daysOfWeek,
-            timeframeNote,
-            priority,
-            content
+            ISBN,
+            title,
+            author,
+            year,
+            publisher,
+            copies
         } = this.state;
-        const item = { name, daysOfWeek, timeframeNote, priority, content };
+        const item = { ISBN, title, author, year, publisher, copies };
 
         this.props.insertSingleItem(item)
             .then(resp => {
@@ -167,72 +171,69 @@ class ItemInsert extends Component {
 
     render() {
         const {
-            name,
-            daysOfWeek,
-            timeframeNote,
-            priority,
-            content
+            ISBN,
+            title,
+            author,
+            year,
+            publisher,
+            image_url_small,
+            image_url_med,
+            image_url_large,
+            copies,
+            isAvailable
         } = this.state;
 
         const { DAYS_OF_WEEK } = shared;
 
         return (
             <Wrapper>
-                <Title>Create Item</Title>
+                <Title>Add New Book</Title>
 
-                <Label>Name: </Label>
+                <Label>ISBN: </Label>
                 <InputText
                     type="text"
-                    value={name}
-                    onChange={this.handleChangeInputName}
+                    value={ISBN}
+                    onChange={this.handleChangeInputISBN}
                 />
 
-                <Fieldset>
-                    <legend>Day(s) of the Week: </legend>
-                    {Object.keys(DAYS_OF_WEEK).map((day, i) => (
-                        <React.Fragment
-                            key={day}
-                        >
-                            <Label
-                                htmlFor={day}
-                            >
-                                <DayInput
-                                    type="checkbox"
-                                    id={day}
-                                    value={day}
-                                    onChange={this.handleChangeDays}
-                                    checked={typeof daysOfWeek[day] === "string"}
-                                />
-                                { DAYS_OF_WEEK[day] }
-                            </Label>
-                        </React.Fragment>
-                    ))}
-                </Fieldset>
-
-                <Label>Timeframe Note: </Label>
+                <Label>Title: </Label>
                 <InputText
                     type="text"
-                    value={timeframeNote}
-                    onChange={this.handleChangeInputTimeframe}
+                    value={title}
+                    onChange={this.handleChangeInputTitle}
+                />
+                <Label>Author: </Label>
+                <InputText
+                    type="text"
+                    value={author}
+                    onChange={this.handleChangeInputAuthor}
                 />
 
-                <Label>Priority: </Label>
+                <Label>Year: </Label>
+                <InputText
+                    type="text"
+                    value={year}
+                    onChange={this.handleChangeInputYear}
+                />
+
+                <Label>Publisher: </Label>
+                <InputText
+                    type="text"
+                    value={publisher}
+                    onChange={this.handleChangeInputPublisher}
+                />
+
+
+                <Label>Copies: </Label>
                 <InputText
                     type="number"
-                    step="0.1"
+                    step="1.0"
                     lang="en-US"
                     min="0"
                     max="1000"
                     pattern="[0-9]+([,\.][0-9]+)?"
-                    value={priority}
-                    onChange={this.handleChangeInputPriority}
-                />
-
-                <Label>Content: </Label>
-                <InputText
-                    type="textarea"
-                    value={content}
-                    onChange={this.handleChangeInputContent}
+                    value={copies}
+                    onChange={this.handleChangeInputCopies}
                 />
 
                 <Button onClick={this.handleInsertItem}>Add Item</Button>

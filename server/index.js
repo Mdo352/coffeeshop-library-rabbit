@@ -2,6 +2,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const mariadb = require('mariadb');
+const pool = require('./db')
 
 const db = require('./db');
 const itemRouter = require('./routes/item-router');
@@ -15,12 +17,11 @@ app.use(bodyParser.json());
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+// mongoDB connection
+app.get('/', (req, res) => res.json({ msg: 'CoffeeShop API'}));
 
 app.use('/api', itemRouter);
 
 app.listen(apiPort, () => {
-    console.log(`[Hack.Diversity React Template] - Server running on port ${apiPort}`);
+    console.log(`Coffeeshop - Server running on port ${apiPort}`);
 });
