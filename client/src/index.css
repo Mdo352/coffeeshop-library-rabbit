@@ -228,7 +228,7 @@
   
   .footer-basic ul {
     padding: 0;
-    list-style: gnone;
+    list-style: none;
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
