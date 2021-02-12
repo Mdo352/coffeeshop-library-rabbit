@@ -12,9 +12,10 @@ export default class Cafe extends Component {
       <div className="container-fluid"><a className="navbar-brand" href="#"><img src="assets/img/logo.png" style={{height: 65}} /></a><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
         <div className="collapse navbar-collapse" id="navcol-1">
           <ul className="nav navbar-nav">
-            <li className="nav-item"><a className="nav-link active" data-bs-hover-animate="swing" href="#">Home</a></li>
-            <li className="nav-item"><a className="nav-link" data-bs-hover-animate="swing" href="#">Library</a></li>
-            <li className="nav-item"><a className="nav-link" data-bs-hover-animate="swing" href="#">Cafe</a></li>
+
+          <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/home">Home</Link></li>
+            <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/library">Library</Link></li>
+            <li className="nav-item"><Link className="nav-link active" data-bs-hover-animate="swing" to="/cafe">Cafe</Link></li>
           </ul>
           <div className="float-left float-md-right mt-5 mt-md-0 search-area" style={{marginLeft: 10}}><i className="fas fa-search float-left search-icon" style={{color: 'rgb(84,29,5)'}} /><input className="float-left float-sm-right custom-search-input" type="search" placeholder="search for book" style={{minWidth: 200}} /></div>
           <ul className="nav navbar-nav ml-auto">
