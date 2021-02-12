@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Cafe from './components/Cafe';
 import Home from './components/Home';
