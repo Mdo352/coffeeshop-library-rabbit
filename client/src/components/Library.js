@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
+import Logo from '../assets/img/logo.png';
+import BG from '../assets/img/xxl_153100081.jpg';
 
 export default class Library extends Component {
     render() {
@@ -7,11 +9,11 @@ export default class Library extends Component {
             <div>
                 <div className="container-fluid" style={{borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
     <nav className="navbar navbar-light navbar-expand-md sticky-top bg-white">
-      <div className="container-fluid"><Link className="navbar-brand" to="#"><img src=" ../assets/img/logo.png" style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
+      <div className="container-fluid"><Link className="navbar-brand" to="#"><img src={Logo} style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
         <div className="collapse navbar-collapse" id="navcol-1">
           <ul className="nav navbar-nav">
-            <li className="nav-item"><Link className="nav-link active" data-bs-hover-animate="swing" to="/home">Home</Link></li>
-            <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/library">Library</Link></li>
+            <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/home">Home</Link></li>
+            <li className="nav-item"><Link className="nav-link active" data-bs-hover-animate="swing" to="/library">Library</Link></li>
             <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/cafe">Cafe</Link></li>
           </ul>
           <div className="float-left float-md-right mt-5 mt-md-0 search-area" style={{marginLeft: 10}}><i className="fas fa-search float-left search-icon" style={{color: 'rgb(84,29,5)'}} /><input className="float-left float-sm-right custom-search-input" type="search" placeholder="search for book" style={{minWidth: 200}} /></div>
@@ -23,7 +25,8 @@ export default class Library extends Component {
       </div>
     </nav>
   </div>
-  <div style={{height: 450, background: 'url("assets/img/pexels-skitterphoto-442420.jpg") center / cover no-repeat'}}>
+  {/* <div style={{height: 450, backgroundImage: 'url("assets/img/pexels-skitterphoto-442420.jpg") center / cover no-repeat'}}> */}
+  <div style={{ height: 450, backgroundImage: `url( ${BG} )` }}>
     <h1 style={{color: 'rgb(255,255,255)', textAlign: 'center', fontFamily: 'Adamina, serif', marginBottom: 0, opacity: '0.62', fontSize: 40, height: 40, marginTop: '-1px', paddingTop: 95}}>Welcome to the Library</h1>
   </div>
   <div className="col-md-12 search-table-col" style={{marginTop: 50}}><h1 style={{color: 'rgb(84,29,5)', textAlign: 'left', fontFamily: 'Adamina, serif', marginBottom: 12, opacity: 1, fontSize: 25}}><u>Find A Book<u /></u></h1><u><u><input type="text" className="search form-control" placeholder="Search by typing here.." style={{borderColor: 'rgb(84,29,5)'}} /><span className="counter pull-right" />
