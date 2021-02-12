@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import logo from "../assets/img/logo.png";
+import bg2 from "../assets/img/pexels-skitterphoto-442420.jpg";
 
 
 export default class Library extends Component {
@@ -25,8 +26,8 @@ export default class Library extends Component {
       </div>
     </nav>
   </div>
-  <div style={{height: 450, background: 'url("assets/img/pexels-skitterphoto-442420.jpg") center / cover no-repeat'}}>
-    <h1 style={{color: 'rgb(255,255,255)', textAlign: 'center', fontFamily: 'Adamina, serif', marginBottom: 0, opacity: '0.62', fontSize: 40, height: 40, marginTop: '-1px', paddingTop: 95}}>Welcome to the Library</h1>
+  <div style={{height: 450, backgroundImage:`url(${bg2})`}}>
+    <h1 style={{color: 'rgb(255,255,255)', textAlign: 'center', fontFamily: 'Adamina, serif', marginBottom: 0, fontSize: 60, height: 40, marginTop: '-1px', paddingTop: 195}}>Welcome to the Library</h1>
   </div>
   <div className="col-md-12 search-table-col" style={{marginTop: 50}}><h1 style={{color: 'rgb(84,29,5)', textAlign: 'left', fontFamily: 'Adamina, serif', marginBottom: 12, opacity: 1, fontSize: 25}}><u>Find A Book<u /></u></h1><u><u><input type="text" className="search form-control" placeholder="Search by typing here.." style={{borderColor: 'rgb(84,29,5)'}} /><span className="counter pull-right" />
         <div className="table-responsive table-bordered table table-hover table-bordered results">
@@ -86,7 +87,7 @@ export default class Library extends Component {
             <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Terms</Link></li>
             <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Privacy Policy</Link></li>
           </ul>
-          <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017</p>
+          <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017 <nbsp></nbsp><Link to="https://github.com/Mdo352/coffeeshop-library-rabbit">Link to Github for Code</Link></p>
         </footer>
       </div>
     </u></u>

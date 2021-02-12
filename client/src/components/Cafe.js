@@ -4,6 +4,7 @@ import logo from "../assets/img/logo.png";
 import late from "../assets/img/pexels-chevanon-photography-312420.jpg";
 import cinnamonroll from "../assets/img/pexels-pixabay-267308.jpg" ;
 import sandwich1 from "../assets/img/pexels-erin-wang-1647163.jpg" ;
+import bg1 from "../assets/img/pexels-afta-putta-gunawan-683039.jpg";
 
 
 export default class Cafe extends Component {
@@ -29,8 +30,8 @@ export default class Cafe extends Component {
       </div>
     </nav>
   </div>
-  <div style={{height: 450, background: 'url("assets/img/pexels-afta-putta-gunawan-683039.jpg") center / cover no-repeat'}}>
-    <h1 style={{color: 'rgb(255,255,255)', textAlign: 'center', fontFamily: 'Adamina, serif', marginBottom: 0, opacity: '0.62', fontSize: 40, height: 40, marginTop: '-1px', paddingTop: 95}}>Welcome to the Cafe</h1>
+  <div style={{height: 450, backgroundImage:`url(${bg1})`}}>
+    <h1 style={{color: 'rgb(255,255,255)', textAlign: 'center', fontFamily: 'Adamina, serif', marginBottom: 0, fontSize:60, height: 40, marginTop: '-1px', paddingTop: 195}}>Welcome to the Cafe</h1>
   </div>
   <div>
     <div className="container" style={{borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
@@ -106,7 +107,7 @@ export default class Cafe extends Component {
             <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Terms</Link></li>
             <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Privacy Policy</Link></li>
           </ul>
-          <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017</p>
+          <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017 <nbsp></nbsp><Link to="https://github.com/Mdo352/coffeeshop-library-rabbit">Link to Github for Code</Link></p>
         </footer>
       </div>
     </u></b></div>

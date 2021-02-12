@@ -28,11 +28,10 @@ export default class Home extends Component {
       </div>
     </nav>
   </div>
-  <div style={{height: 450, backgroundImage:`url(${bg})`}}>
-    <h1 style={{paddingTop: 75, paddingLeft: 45, width: 650, marginTop: '-1px', opacity: '0.59'}}>Welcome to CSCL</h1>
-    <p style={{paddingLeft: 0, width: 450, marginLeft: 95, color: 'rgb(255,255,255)', opacity: '0.56'}}>Bad libraries build collections, good libraries build services, great libraries build communities.<br /></p>
-    <p style={{paddingLeft: 120}}><Link className="btn btn-primary border rounded-pill border-dark" role="button" data-bs-hover-animate="rubberBand" style={{marginLeft: 95, background: 'rgb(84,29,5)', opacity: '0.86'}}>Learn more</Link></p>
-  </div>
+  <div style={{height: 450, backgroundImage:`url(${bg})`, opacity:".9"}}>
+    <div style={{paddingTop:75}}><h1 style={{paddingTop: 75, fontSize:60,  width: 650,  marginTop: '-1px', marginLeft:700, color:"#ffffff"}}>Welcome to CSCL</h1>
+    <p style={{paddingLeft: 120, paddingTop:35,  marginLeft:665}}><Link className="btn btn-primary border rounded-pill border-dark" role="button" data-bs-hover-animate="rubberBand" style={{marginLeft: 95, background: 'rgb(84,29,5)', opacity: '0.86'}}>Learn more</Link></p>
+  </div></div>
   <div style={{marginTop: 25}}>
     <div className="container">
       <div className="row">
@@ -57,7 +56,7 @@ export default class Home extends Component {
         <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Terms</Link></li>
         <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Privacy Policy</Link></li>
       </ul>
-      <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017</p>
+      <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017 <nbsp></nbsp><Link to="https://github.com/Mdo352/coffeeshop-library-rabbit">Link to Github for Code</Link></p>
     </footer>
   </div>
 </div>
