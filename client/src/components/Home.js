@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import logo from "../assets/img/logo.png";
+import dw from "../assets/img/dw.png"
+import bg from "../assets/img/xxl_153100081.jpg"
 
 import Logo from '../assets/img/logo.png';
 import JumboBG from '../assets/img/jumbotron-bg-home.jpg';
@@ -12,6 +15,7 @@ export default class Home extends Component {
     return (
       <div>
         <div>
+
 
           <div className="container-fluid" style={{borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
             <nav className="navbar navbar-light navbar-expand-md sticky-top bg-white">

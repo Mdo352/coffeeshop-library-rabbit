@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import logo from "../assets/img/logo.png";
+import late from "../assets/img/pexels-chevanon-photography-312420.jpg";
+import cinnamonroll from "../assets/img/pexels-pixabay-267308.jpg" ;
+import sandwich1 from "../assets/img/pexels-erin-wang-1647163.jpg" ;
 
 import Logo from '../assets/img/logo.png';
 import JumboBG from '../assets/img/jumbotron-bg-cafe1.jpg'
@@ -116,7 +120,6 @@ export default class Cafe extends Component {
             <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017</p>
           </footer>
         </div>
-
       </u></b>
       </div>      
     )
