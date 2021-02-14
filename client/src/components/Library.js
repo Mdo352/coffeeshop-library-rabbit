@@ -11,7 +11,7 @@ export default class Library extends Component {
 
         <div className="container-fluid" style={{borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
           <nav className="navbar navbar-light navbar-expand-md sticky-top bg-white">
-            <div className="container-fluid"><Link className="navbar-brand" to="#"><img src={Logo} style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
+            <div className="container-fluid"><Link className="navbar-brand" to="#"><img alt='Logo for Website' src={Logo} style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
               <div className="collapse navbar-collapse" id="navcol-1">
                 <ul className="nav navbar-nav">
                   <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/home">Home</Link></li>
@@ -102,7 +102,7 @@ export default class Library extends Component {
             <div className="social"><Link to="#"><i className="icon ion-social-instagram" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="icon ion-social-snapchat" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="icon ion-social-twitter" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="icon ion-social-facebook" style={{color: 'rgb(255,255,255)'}} /></Link></div>
             <ul className="list-inline">
               <li className="list-inline-item"><Link to="/home" style={{color: 'rgb(255,255,255)'}}>Home</Link></li>
-              <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Services</Link></li>
+              <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>View Code</Link></li>
               <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>About</Link></li>
               <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Terms</Link></li>
               <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Privacy Policy</Link></li>
