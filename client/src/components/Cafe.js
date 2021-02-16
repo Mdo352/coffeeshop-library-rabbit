@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 
-import Logo from '../assets/img/logo.png';
 import JumboBG from '../assets/img/jumbotron-bg-cafe1.jpg';
 import EspressoImg from '../assets/img/espresso.jpg';
 import LondonFogImg from '../assets/img/tea.jpg';
@@ -20,26 +18,6 @@ export default class Cafe extends Component {
     return (
             
       <div>
-        <div className="container-fluid" style={{borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
-          <nav className="navbar navbar-light navbar-expand-md sticky-top bg-white">
-            <div className="container-fluid"><a className="navbar-brand"><img alt='Logo for website' src={Logo} style={{height: 65}} /></a><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
-              <div className="collapse navbar-collapse" id="navcol-1">
-                <ul className="nav navbar-nav">
-
-                <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/home">Home</Link></li>
-                  <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/library">Library</Link></li>
-                  <li className="nav-item"><Link className="nav-link active" data-bs-hover-animate="swing" to="/cafe">Cafe</Link></li>
-                </ul>
-                <div className="float-left float-md-right mt-5 mt-md-0 search-area" style={{marginLeft: 10}}><i className="fas fa-search float-left search-icon" style={{color: 'rgb(84,29,5)'}} /><input className="float-left float-sm-right custom-search-input" type="search" placeholder="search for book" style={{minWidth: 200}} /></div>
-                <ul className="nav navbar-nav ml-auto">
-                  <li className="nav-item"><a className="nav-link active" href="#"><button className="btn" data-toggle="modal" data-bs-tooltip data-bs-hover-animate="swing" data-target="#signup" type="button" style={{color: 'rgb(84,29,5)', borderColor: '#541d05'}}>Log In</button></a></li>
-                  <li className="nav-item"><a className="nav-link active" href="#"><button className="btn btn-primary" data-bs-hover-animate="swing" data-toggle="modal" data-target="#signin" type="button" style={{background: 'rgb(84,29,5)'}}>Sign Up</button></a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-
         <div style={{height: 450, background: `url(${JumboBG})`}}>
           <h1 style={{color: 'rgb(255,255,255)', textAlign: 'center', fontFamily: 'Adamina, serif', marginBottom: 0, opacity: '0.62', fontSize: 40, height: 40, marginTop: '-1px', paddingTop: 95}}>Welcome to the Cafe</h1>
         </div>
@@ -113,7 +91,7 @@ export default class Cafe extends Component {
                 </u></b></div><b><u>
                 </u></b></div><b><u>
 
-        <div className="footer-basic" style={{background: 'rgb(84,29,5)', paddingTop: 0, marginTop: 100}}>
+        {/* <div className="footer-basic" style={{background: 'rgb(84,29,5)', paddingTop: 0, marginTop: 100}}>
           <footer>
             <div className="social"><a href="#"><i className="icon ion-social-instagram" style={{color: 'rgb(255,255,255)'}} /></a><a href="#"><i className="icon ion-social-snapchat" style={{color: 'rgb(255,255,255)'}} /></a><a href="#"><i className="icon ion-social-twitter" style={{color: 'rgb(255,255,255)'}} /></a><a href="#"><i className="icon ion-social-facebook" style={{color: 'rgb(255,255,255)'}} /></a></div>
             <ul className="list-inline">
@@ -125,7 +103,7 @@ export default class Cafe extends Component {
             </ul>
             <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017</p>
           </footer>
-        </div>
+        </div> */}
       </u></b>
       </div>      
     )

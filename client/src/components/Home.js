@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
-import Logo from '../assets/img/logo.png';
 import JumboBG from '../assets/img/jumbotron-bg-home.jpg';
 import DW from '../assets/img/dw.png';
 
@@ -12,27 +11,6 @@ export default class Home extends Component {
     return (
       <div>
         <div>
-
-
-          <div className="container-fluid" style={{borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
-            <nav className="navbar navbar-light navbar-expand-md sticky-top bg-white">
-              <div className="container-fluid"><Link className="navbar-brand" to="#"><img alt='Main Logo For The website' src={Logo} style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
-                <div className="collapse navbar-collapse" id="navcol-1">
-                  <ul className="nav navbar-nav">
-                    <li className="nav-item"><Link className="nav-link active" data-bs-hover-animate="swing" to="/home">Home</Link></li>
-                    <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/library">Library</Link></li>
-                    <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/cafe">Cafe</Link></li>
-                  </ul>
-                  <div className="float-left float-md-right mt-5 mt-md-0 search-area" style={{marginLeft: 10}}><i className="fas fa-search float-left search-icon" style={{color: 'rgb(84,29,5)'}} /><input className="float-left float-sm-right custom-search-input" type="search" placeholder="search for book" style={{minWidth: 200}} /></div>
-                  <ul className="nav navbar-nav ml-auto">
-                    <li className="nav-item"><Link className="nav-link active" to="#"><button className="btn" data-toggle="modal" data-bs-tooltip data-bs-hover-animate="swing" data-target="#signup" type="button" style={{color: 'rgb(84,29,5)', borderColor: '#541d05'}}>Log In</button></Link></li>
-                    <li className="nav-item"><Link className="nav-link active" to="#"><button className="btn btn-primary" data-bs-hover-animate="swing" data-toggle="modal" data-target="#signin" type="button" style={{background: 'rgb(84,29,5)'}}>Sign Up</button></Link></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-
           <div style={{ height: 450, backgroundImage: `url( ${JumboBG} )` }}>
             <h1 style={{paddingTop: 75, paddingLeft: 45, width: 650, marginTop: '-1px', opacity: '0.59'}}>Welcome to CSCL</h1>
             <p style={{paddingLeft: 0, width: 450, marginLeft: 95, color: 'rgb(255,255,255)', opacity: '0.56'}}>Bad libraries build collections, good libraries build services, great libraries build communities.<br /></p>
@@ -54,7 +32,7 @@ export default class Home extends Component {
             </div>
           </div>
 
-          <div className="footer-basic" style={{background: 'rgb(84,29,5)', paddingTop: 0, marginTop: 100}}>
+          {/* <div className="footer-basic" style={{background: 'rgb(84,29,5)', paddingTop: 0, marginTop: 100}}>
             <footer>
               <div className="social" style={{fontSize: '24p'}}>
                 <Link to="#"><i className="icon ion-social-instagram" style={{color: 'rgb(255,255,255)'}} /></Link>
@@ -73,7 +51,8 @@ export default class Home extends Component {
               </ul>
               <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017</p>
             </footer>
-          </div>
+          </div> */}
+
         </div>
       </div>
     )
