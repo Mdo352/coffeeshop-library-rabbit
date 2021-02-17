@@ -2,12 +2,16 @@ import Links from './Links';
 import Logo from './Logo';
 import NavBar from './NavBar';
 import PageLayout from './PageLayout';
-import Welcome from './Welcome';
+import Home from './Home';
+import Footer from './Footer';
+import Cafe from './Cafe';
 
 export {
   Links,
   Logo,
   NavBar,
-  PageLayout,
-  Welcome,
+  Home,
+  Footer,
+  Cafe,
+  PageLayout
 };

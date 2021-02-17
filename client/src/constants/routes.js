@@ -1,8 +1,10 @@
 // Public routes
 const HOME = '/';
 const ABOUT = '/about';
+const CAFE = '/cafe';
 const SIGN_UP = '/signup';
 const LOG_IN = '/login';
+
 
 // Post routes
 const ITEMS = '/items';
@@ -13,6 +15,7 @@ const ITEM_UPDATE = '/item/update/:id';
 export const routes = {
     HOME,
     ABOUT,
+    CAFE,
     SIGN_UP,
     LOG_IN,
     ITEMS,

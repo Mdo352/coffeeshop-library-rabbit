@@ -8,15 +8,16 @@ import * as actions from './actions';
 import { routes } from './constants';
 
 // Styles
-import { CssBaseline } from '@material-ui/core';
+// import { CssBaseline } from '@material-ui/core';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
 
 // Static/Stateless
 import {
     NavBar,
-    PageLayout,
-    Welcome
+    Cafe,
+    Home,
+    Footer
 } from './components';
 
 // Pages
@@ -32,7 +33,8 @@ class App extends Component {
 
         const publicViews = (
             <Switch>
-                <Route exact path={routes.HOME} component={Welcome} />
+                <Route exact path={routes.HOME} component={Home} />
+                <Route path={routes.CAFE} component={Cafe} />
                 <Route exact path={routes.ITEMS} component={ItemsList} />
                 <Route exact path={`${routes.ITEMS}/react-table-v6`} component={ItemsTable} />
                 <Route exact path={routes.ITEM_INSERT} component={ItemInsert} />
@@ -42,14 +44,15 @@ class App extends Component {
 
         return (
             <Router>
-                <CssBaseline />
+                {/* <CssBaseline /> */}
                 <NavBar />
                 <div className="app--main">
-                    <PageLayout />
+                    {/* <PageLayout /> */}
                     <div className="view-container">
                         {publicViews}
                     </div>
                 </div>
+                <Footer />
             </Router>
         );
     };
