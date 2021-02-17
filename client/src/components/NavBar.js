@@ -33,7 +33,7 @@ class NavBar extends Component {
                         <div className="collapse navbar-collapse" id="navcol-1">
                         <ul className="nav navbar-nav">
                             <li className="nav-item"><Link className="nav-link active" data-bs-hover-animate="swing" to="/">Home</Link></li>
-                            <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/items">Library</Link></li>
+                            <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/items/react-table-v6">Library</Link></li>
                             <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/cafe">Cafe</Link></li>
                             <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/item/create">Add</Link></li>
                         </ul>

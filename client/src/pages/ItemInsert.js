@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { insertSingleItem } from '../actions';
-import { shared } from '../constants';
 
 import styled from 'styled-components';
 
@@ -54,13 +53,6 @@ const Fieldset = styled.fieldset.attrs({
     }
 `;
 
-const DayInput = styled.input.attrs({
-    className: '',
-})`
-    margin: 5px 5px 5px auto;
-    text-align: center;
-`;
-
 const Button = styled.button.attrs({
     className: 'btn btn-primary',
 })`
@@ -84,61 +76,93 @@ class ItemInsert extends Component {
          */
         super(props);
         this.state = {
-            name: '',
-            daysOfWeek: {},
-            timeframeNote: '',
-            priority: 0,
-            content: '',
+            isbn: '',
+            title: '',
+            author: '',
+            publication_year: '',
+            publisher: '',
+            image_url_small: '',
+            image_url_med: '',
+            image_url_large: '',
+            copies: 0,
+            available: 0
         };
     }
 
-    handleChangeInputName = async event => {
-        const name = event.target.value;
-        this.setState({ name });
+    handleChangeInputISBN = async event => {
+        const isbn = event.target.value;
+        this.setState({ isbn });
     }
 
-    handleChangeDays = async event => {
-        const { checked, value } = event.target;
-        const { daysOfWeek } = this.state;
-        const { DAYS_OF_WEEK } = shared;
-
-        if (checked && !daysOfWeek[value]) {
-            daysOfWeek[value] = DAYS_OF_WEEK[value];
-        } else if (!checked && daysOfWeek[value]) {
-            delete daysOfWeek[value];
-        }
-        this.setState({ daysOfWeek });
+    handleChangeInputTitle = async event => {
+        const title = event.target.value;
+        this.setState({ title });
+    }
+    handleChangeInputAuthor = async event => {
+        const author = event.target.value;
+        this.setState({ author });
+    }
+    handleChangeInputYear = async event => {
+        const publication_year = event.target.value;
+        this.setState({ publication_year });
+    }
+    handleChangeInputPublisher = async event => {
+        const publisher = event.target.value;
+        this.setState({ publisher });
+    }
+    handleChangeInputImageSmall = async event => {
+        const image_url_small = event.target.value;
+        this.setState({ image_url_small });
+    }
+    handleChangeInputImageMed = async event => {
+        const image_url_med = event.target.value;
+        this.setState({ image_url_med });
+    }
+    handleChangeInputImageLarge = async event => {
+        const image_url_large = event.target.value;
+        this.setState({ image_url_large });
     }
 
-    handleChangeInputTimeframe = async event => {
-        const timeframeNote = event.target.value;
-        this.setState({ timeframeNote });
-    }
-
-    handleChangeInputPriority = async event => {
-        const priority = event.target.validity.valid
+    handleChangeInputCopies = async event => {
+        const copies = event.target.validity.valid
             ? event.target.value
-            : this.state.priority;
+            : this.state.copies;
 
-        this.setState({ priority });
+        this.setState({ copies });
     }
 
-    handleChangeInputContent = async event => {
-        const content = event.target.value;
-        this.setState({ content });
+    handleChangeInputAvailable = async event => {
+        const available = event.target.value;
+        this.setState({ available });
     }
 
     handleInsertItem = event => {
         event.preventDefault();
 
         const {
-            name,
-            daysOfWeek,
-            timeframeNote,
-            priority,
-            content
+            isbn,
+            title,
+            author,
+            publication_year,
+            publisher,
+            image_url_small,
+            image_url_med,
+            image_url_large,
+            copies,
+            available
         } = this.state;
-        const item = { name, daysOfWeek, timeframeNote, priority, content };
+        const item = { 
+            isbn,
+            title,
+            author,
+            publication_year,
+            publisher,
+            image_url_small,
+            image_url_med,
+            image_url_large,
+            copies,
+            available
+        };
 
         this.props.insertSingleItem(item)
             .then(resp => {
@@ -147,11 +171,16 @@ class ItemInsert extends Component {
                 if (typeof resp === "object" && (resp.status < 300 && resp.status >= 200)) {
                     window.alert('Item inserted successfully');
                     this.setState({
-                        name: '',
-                        daysOfWeek: {},
-                        timeframeNote: '',
-                        priority: 0,
-                        content: '',
+                        isbn: '',
+                        title: '',
+                        author: '',
+                        publication_year: '',
+                        publisher: '',
+                        image_url_small: '',
+                        image_url_med: '',
+                        image_url_large: '',
+                        copies: 0,
+                        available: 0,
                     });
                 } else {
                     throw resp;
@@ -167,72 +196,84 @@ class ItemInsert extends Component {
 
     render() {
         const {
-            name,
-            daysOfWeek,
-            timeframeNote,
-            priority,
-            content
+            isbn,
+            title,
+            author,
+            publication_year,
+            publisher,
+            image_url_small,
+            image_url_med,
+            image_url_large,
+            copies,
+            available
         } = this.state;
-
-        const { DAYS_OF_WEEK } = shared;
 
         return (
             <Wrapper>
                 <Title>Create Item</Title>
 
-                <Label>Name: </Label>
+                <Label>ISBN: </Label>
                 <InputText
                     type="text"
-                    value={name}
-                    onChange={this.handleChangeInputName}
+                    value={isbn}
+                    onChange={this.handleChangeInputISBN}
                 />
 
-                <Fieldset>
-                    <legend>Day(s) of the Week: </legend>
-                    {Object.keys(DAYS_OF_WEEK).map((day, i) => (
-                        <React.Fragment
-                            key={day}
-                        >
-                            <Label
-                                htmlFor={day}
-                            >
-                                <DayInput
-                                    type="checkbox"
-                                    id={day}
-                                    value={day}
-                                    onChange={this.handleChangeDays}
-                                    checked={typeof daysOfWeek[day] === "string"}
-                                />
-                                { DAYS_OF_WEEK[day] }
-                            </Label>
-                        </React.Fragment>
-                    ))}
-                </Fieldset>
-
-                <Label>Timeframe Note: </Label>
+                <Label>Title: </Label>
                 <InputText
                     type="text"
-                    value={timeframeNote}
-                    onChange={this.handleChangeInputTimeframe}
+                    value={title}
+                    onChange={this.handleChangeInputTitle}
                 />
 
-                <Label>Priority: </Label>
+                <Label>Author: </Label>
                 <InputText
-                    type="number"
-                    step="0.1"
-                    lang="en-US"
-                    min="0"
-                    max="1000"
-                    pattern="[0-9]+([,\.][0-9]+)?"
-                    value={priority}
-                    onChange={this.handleChangeInputPriority}
+                    type="text"
+                    value={author}
+                    onChange={this.handleChangeInputAuthor}
                 />
 
-                <Label>Content: </Label>
+                <Label>Year: </Label>
                 <InputText
-                    type="textarea"
-                    value={content}
-                    onChange={this.handleChangeInputContent}
+                    type="text"
+                    value={publication_year}
+                    onChange={this.handleChangeInputYear}
+                />
+                <Label>Publisher: </Label>
+                <InputText
+                    type="text"
+                    value={publisher}
+                    onChange={this.handleChangeInputPublisher}
+                />
+                <Label>Image URL (Small): </Label>
+                <InputText
+                    type="text"
+                    value={image_url_small}
+                    onChange={this.handleChangeInputImageSmall}
+                />
+                <Label>Image URL (Medium): </Label>
+                <InputText
+                    type="text"
+                    value={image_url_med}
+                    onChange={this.handleChangeInputImageMed}
+                />
+                <Label>Image URL (Large): </Label>
+                <InputText
+                    type="text"
+                    value={image_url_large}
+                    onChange={this.handleChangeInputImageLarge}
+                />
+                <Label>Copies: </Label>
+                <InputText
+                    type="text"
+                    value={copies}
+                    onChange={this.handleChangeInputCopies}
+                />
+                <Label>Available: </Label>
+                <InputText
+                    type="text"
+                    value={available}
+                    onChange={this.handleChangeInputAvailable}
                 />
 
                 <Button onClick={this.handleInsertItem}>Add Item</Button>
