@@ -5,6 +5,7 @@ import dw from "../assets/img/dw.png"
 import bg from "../assets/img/xxl_153100081.jpg"
 
 
+
 export default class Home extends Component {
     render() {
         return (
@@ -12,7 +13,7 @@ export default class Home extends Component {
                 <div>
   <div className="container-fluid" style={{borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
     <nav className="navbar navbar-light navbar-expand-md sticky-top bg-white">
-      <div className="container-fluid"><Link className="navbar-brand" to="#"><img src={logo} style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
+      <div className="container-fluid"><Link className="navbar-brand" to="#"><img alt="pic12" src={logo} style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
         <div className="collapse navbar-collapse" id="navcol-1">
           <ul className="nav navbar-nav">
             <li className="nav-item"><Link className="nav-link active" data-bs-hover-animate="swing" to="/home">Home</Link></li>
@@ -42,13 +43,13 @@ export default class Home extends Component {
               </svg>Sign up for Library Card</h1><input className="border rounded-0 form-control d-print-inline d-sm-inline d-md-inline d-lg-inline d-xl-inline flex-shrink-1 flex-sm-shrink-1 flex-md-shrink-1" type="text" style={{width: 500, marginBottom: 15, marginLeft: 25}} placeholder="Name" /><input className="border rounded-0 form-control d-sm-inline flex-shrink-1" type="email" style={{width: 500, marginBottom: 15, marginLeft: 25}} placeholder="Email" /><input className="border rounded-0 form-control flex-shrink-1" type="text" style={{width: 500, marginBottom: 15, marginLeft: 25}} placeholder="Address" /><input className="border rounded-0 form-control flex-shrink-1" type="tel" placeholder="Mobile number" style={{marginBottom: 15, width: 500, marginLeft: 25}} /><input className="border rounded-0 form-control flex-shrink-1" type="tel" placeholder="Mobile number" style={{marginBottom: 15, width: 500, marginLeft: 25}} /><input className="border rounded-0 form-control flex-shrink-1" type="tel" placeholder="Mobile number" style={{marginBottom: 15, width: 500, marginLeft: 25}} /><button className="btn btn-primary flex-shrink-1" type="button" style={{width: 500, marginRight: 0, marginLeft: 25, background: '#541d05'}}>Save</button>
           </form>
         </div>
-        <div className="col-md-6"><img style={{width: 490, height: 390}} src={dw} /></div>
+        <div className="col-md-6"><img alt = "pic2" style={{width: 490, height: 390}} src={dw} /></div>
       </div>
     </div>
   </div>
   <div className="footer-basic" style={{background: 'rgb(84,29,5)', paddingTop: 0, marginTop: 100}}>
     <footer>
-      <div className="social" style={{fontSize: '24p'}}><Link to="#"><i className="icon ion-social-instagram" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="icon ion-social-snapchat" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="icon ion-social-twitter" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#" style={{color: 'rgb(255,255,255)'}}><i className="icon ion-social-facebook" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#" style={{color: 'rgb(255,255,255)'}}><i className="icon ion-social-github" style={{color: 'rgb(255,255,255)'}} /></Link></div>
+    <div className="social"><Link to="#"><i className="fab fa-facebook"style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="fab fa-snapchat" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="fab fa-twitter" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i class="fab fa-instagram" style={{color: 'rgb(255,255,255)'}} /></Link></div>
       <ul className="list-inline">
         <li className="list-inline-item"><Link to="/home" style={{color: 'rgb(255,255,255)'}}>Home</Link></li>
         <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Services</Link></li>

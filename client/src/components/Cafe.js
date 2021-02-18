@@ -14,7 +14,7 @@ export default class Cafe extends Component {
             <div>
   <div className="container-fluid" style={{borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
     <nav className="navbar navbar-light navbar-expand-md sticky-top bg-white">
-      <div className="container-fluid"><Link className="navbar-brand" to="#"><img src={logo} style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
+      <div className="container-fluid"><Link className="navbar-brand" to="#"><img alt="pic3" src={logo} style={{height: 65}} /></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
         <div className="collapse navbar-collapse" id="navcol-1">
           <ul className="nav navbar-nav">
              <li className="nav-item"><Link className="nav-link" data-bs-hover-animate="swing" to="/home">Home</Link></li>
@@ -42,17 +42,17 @@ export default class Cafe extends Component {
             </div>
           </u></b></div><b><u>
           <div className="row" style={{marginBottom: 15, borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)'}}>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(84,29,5)'}}><img style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={late}/>
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(84,29,5)'}}><img alt="pic5"style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={late}/>
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Espresso</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price:</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Sizes:</h1>
             </div>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(84,29,5)'}}><img style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={late} />
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(84,29,5)'}}><img alt="pic4"style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={late} />
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Espresso</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price:</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Sizes:</h1>
             </div>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(84,29,5)'}}><img style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={late}/>
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(84,29,5)'}}><img alt="pic" style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={late}/>
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Espresso</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price:</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Sizes:</h1>
@@ -65,15 +65,15 @@ export default class Cafe extends Component {
             </div>
           </div>
           <div className="row" style={{borderTopStyle: 'solid', borderTopColor: 'rgba(173,175,174,0)', borderBottomStyle: 'solid', borderBottomColor: 'rgb(84,29,5)', marginBottom: 20}}>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(89,29,5)'}}><img style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={cinnamonroll} />
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(89,29,5)'}}><img alt="pic7" style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={cinnamonroll} />
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Cinnamon Roll</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price: 3.50</h1>
             </div>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(89,29,5)'}}><img style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={cinnamonroll}  />
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(89,29,5)'}}><img alt="pic8"style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={cinnamonroll}  />
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Cinnamon Roll<br /><br /></h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price:</h1>
             </div>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(89,29,5)'}}><img style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={cinnamonroll} />
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', borderColor: 'rgb(89,29,5)'}}><img alt="pic9" style={{width: 340, height: 80, marginTop: 5, maxWidth: '100%'}} src={cinnamonroll} />
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Cinnamon Roll<br /><br /></h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price:</h1>
             </div>
@@ -82,15 +82,15 @@ export default class Cafe extends Component {
                             <h1 style={{textAlign: 'left', color: 'rgb(84,29,5)', fontSize: 32, fontFamily: 'Adamina, serif'}}>Sandwiches and Wraps:</h1>
 </div>
           <div className="row" style={{color: 'rgb(84,29,5)'}}>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', textAlign: 'center'}}><img className="img-fluid" style={{width: 340, height: 80, borderBottomStyle: 'solid', borderBottomColor: 'rgba(84,29,5,0)', marginTop: 5}} src={sandwich1}/>
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', textAlign: 'center'}}><img alt="pic10" className="img-fluid" style={{width: 340, height: 80, borderBottomStyle: 'solid', borderBottomColor: 'rgba(84,29,5,0)', marginTop: 5}} src={sandwich1}/>
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Roast Beef</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price:</h1>
             </div>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', textAlign: 'center'}}><img className="img-fluid" style={{width: 340, height: 80, borderBottomStyle: 'solid', borderBottomColor: 'rgba(84,29,5,0)', marginTop: 5}} src={sandwich1} />
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', textAlign: 'center'}}><img alt="pic11" className="img-fluid" style={{width: 340, height: 80, borderBottomStyle: 'solid', borderBottomColor: 'rgba(84,29,5,0)', marginTop: 5}} src={sandwich1} />
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Roast Beef</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price:</h1>
             </div>
-            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', textAlign: 'center'}}><img className="img-fluid" style={{width: 340, height: 80, borderBottomStyle: 'solid', borderBottomColor: 'rgba(84,29,5,0)', marginTop: 5}} src={sandwich1} />
+            <div className="col-md-4" style={{height: 175, borderStyle: 'solid', textAlign: 'center'}}><img alt="pic13"className="img-fluid" style={{width: 340, height: 80, borderBottomStyle: 'solid', borderBottomColor: 'rgba(84,29,5,0)', marginTop: 5}} src={sandwich1} />
               <h1 style={{height: 25, fontSize: 20, color: 'rgb(84,29,5)', textAlign: 'center'}}>Roast Beef</h1>
               <h1 style={{height: 25, fontSize: 16, color: 'rgb(84,29,5)', textAlign: 'left'}}>Price:</h1>
             </div>
@@ -99,7 +99,7 @@ export default class Cafe extends Component {
       </u></b></div><b><u>
       <div className="footer-basic" style={{background: 'rgb(84,29,5)', paddingTop: 0, marginTop: 100}}>
         <footer>
-          <div className="social"><Link to="#"><i className="icon ion-social-instagram" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="icon ion-social-snapchat" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="icon ion-social-twitter" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="icon ion-social-facebook" style={{color: 'rgb(255,255,255)'}} /></Link></div>
+          <div className="social"><Link to="#"><i className="fab fa-facebook"style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="fab fa-snapchat" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i className="fab fa-twitter" style={{color: 'rgb(255,255,255)'}} /></Link><Link to="#"><i class="fab fa-instagram" style={{color: 'rgb(255,255,255)'}} /></Link></div>
           <ul className="list-inline">
             <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Home</Link></li>
             <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Services</Link></li>
