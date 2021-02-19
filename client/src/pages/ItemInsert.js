@@ -265,13 +265,21 @@ class ItemInsert extends Component {
                 />
                 <Label>Copies: </Label>
                 <InputText
-                    type="text"
+                    type="number"
+                    step="1"
+                    lang="en-US"
+                    min="0"
+                    max="1000"
                     value={copies}
                     onChange={this.handleChangeInputCopies}
                 />
                 <Label>Available: </Label>
                 <InputText
-                    type="text"
+                    type="number"
+                    step='1'
+                    lang='en-US'
+                    min='0'
+                    max='1000'
                     value={available}
                     onChange={this.handleChangeInputAvailable}
                 />
