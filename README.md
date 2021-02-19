@@ -4,6 +4,18 @@
 
 The purpose of this application is to provide both book and coffee lovers a place to hang out while enjoying a great book and sipping one the best coffee in New England. Come eat, sip, read and hang out.
 
+## Getting Started
+
+Wondering how to get this thing working? Well, do we have the READMEs for you!
+
+- [server](server/README.md)
+- [client](client/README.md)
+
+## Deployment
+
+- [Amplify](/docs/amplify/README.md)
+- [Beanstalk](/docs/beanstalk/README.md)
+
 ## Installing Node Packages
 
 Use [NodeJS](https://nodejs.org/en/) to install NodeJS to local environment
