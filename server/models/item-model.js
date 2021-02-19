@@ -3,25 +3,44 @@ const Schema = mongoose.Schema;
 
 const Item = new Schema(
     {
-        name: {
+        isbn: {
             type: String,
             required: true
         },
-        daysOfWeek: {
-            type: Map,
-            of: String,
-            required: false
+        title: {
+            type: String,
+            required: true
         },
-        timeframeNote: {
+        author: {
+            type: String,
+            required: true
+        },
+        publication_year: {
+            type: String,
+            required: true
+        },
+        publisher: {
+            type: String,
+            required: true
+        },
+        image_url_small: {
             type: String,
             required: false
         },
-        priority: {
+        image_url_med: {
+            type: String,
+            required: false
+        },
+        image_url_large: {
+            type: String,
+            required: true
+        },
+        copies: {
             type: Number,
-            required: false
+            required: true
         },
-        content: {
-            type: String,
+        available: {
+            type: Number,
             required: true
         },
     },

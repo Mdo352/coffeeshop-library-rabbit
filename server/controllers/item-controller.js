@@ -133,7 +133,7 @@ createItem = (req, res) => {
         });
 };
 
-updateItem = (req, res) => {
+updateItem = async (req, res) => {
     const body = req.body;
     // console.log('----------------------- updateItem: req -----------------------');
     // console.log(req);
@@ -151,12 +151,18 @@ updateItem = (req, res) => {
 
     const itemForUpdate = {
         _id: req.params.id,
-        name: body.name,
-        daysOfWeek: body.daysOfWeek,
-        timeframeNote: body.timeframeNote,
-        priority: body.priority,
-        content: body.content,
+        isbn: body.isbn,
+        title: body.title,
+        author: body.author,
+        publication_year: body.publication_year,
+        publisher: body.publisher,
+        image_url_small: body.image_url_small,
+        image_url_med: body.image_url_med,
+        image_url_large: body.image_url_large,
+        copies: body.copies,
+        available: body.available
     };
+    // console.log(itemForUpdate);
 
     // console.log('----------------------- updateItem: res -----------------------');
     // console.log(res);
@@ -174,11 +180,11 @@ updateItem = (req, res) => {
                 });
         }
         // TODO: make this neater
-        // console.log('----------------------- updateItem: item -----------------------');
-        // console.log(item);
+        // console.log('----------------------- updateItem: WriteOpsRes -----------------------');
+        // console.log(writeOpRes);
         return writeOpRes;
     })
-    .then(res => {
+    .then(result => {
         // console.log('----------------------- updateItem - findOne: res -----------------------');
         // console.log(res);
         console.log(`[Hack.Diversity React Template] - 200 in 'updateItem': Item updated!`);
@@ -188,7 +194,7 @@ updateItem = (req, res) => {
                 success: true,
                 id: req.params.id,
                 message: 'Item updated!',
-                writeOpResult: res
+                writeOpResult: result
             });
     }).catch(err => {
         console.error(`[Hack.Diversity React Template] - caught error in 'updateItem': ${err}`);
