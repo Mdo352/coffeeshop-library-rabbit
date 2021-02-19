@@ -1,33 +1,42 @@
-# --- Hack.Diversity React/Redux Template ---
+# Coffe Shop Library App.
 
-## Getting Started
-Some _really_ great instructions and stuff...eventually.
+## Description
+
+The purpose of this application is to provide both book and coffee lovers a place to hang out while enjoying a great book and sipping one the best coffee in New England. Come eat, sip, read and hang out.
 
 ## Installing Node Packages
-_TBD:_
+
+Use [NodeJS](https://nodejs.org/en/) to install NodeJS to local environment
 
 Required Versions:
+
 - Node.js: v10.14.2
 - Either
---- npm: v6.4.1
---- yarn: v1.22.5
+  --- npm: v6.4.1
+  --- yarn: v1.22.5
 
 Upgrading versions:
+
 - Node.js
+
 ```
 TODO
 ```
 
 - npm
+
 ```
 TODO
 ```
 
 - yarn
+
 ```
 brew upgrade yarn
 ```
+
 or
+
 ```
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ```
@@ -35,7 +44,9 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ## Setting up MongoDB
 
 ### Install with Homebrew (MacOSx)
+
 If you haven't previously installed mongodb:
+
 ```
 $ brew tap mongodb/brew
 $ brew install mongodb-community
@@ -43,6 +54,7 @@ $ brew services start mongodb-community
 ```
 
 If you have a previous version of mongodb
+
 ```
 $ brew services stop mongodb
 $ brew uninstall mongodb
@@ -53,39 +65,49 @@ $ brew services start mongodb-community
 ```
 
 Create directory for storing data:
+
 ```
 $ mkdir -p /data/db
 ```
 
 Execute MongoDB as service:
+
 ```
 $ brew services start mongodb
 // this may not still be relevant?
 ```
 
 Create and name database:
+
 ```
 $ mongo
 > use items
 ```
+
 _(In this case, `items` is the name of the database that we will be creating and using for this app.)_
 
 ## Starting the Node Server
+
 In new tab/window:
+
 ```
 $ cd server/
 ```
+
 then run either:
+
 ```
 $ yarn server
 ```
+
 _(Note: this is running the `server` command defined in `server/package.json`.)_
 
 ## References
+
 - [How to create your first MERN (MongoDB, Express JS, React JS and Node JS) Stack](https://medium.com/swlh/how-to-create-your-first-mern-mongodb-express-js-react-js-and-node-js-stack-7e8b20463e66)
 
-
 # --- From "Create React App" README ---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -128,11 +150,38 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Deploying Your App
 
 ### Client (Frontend)
+
 Please see [Amplify Deployment Documentation](docs/amplify/README.md)
 
 ### API (Backend)
+
 Please see [AWS Beanstalk and DynamoDB Deployment Documentation](docs/beanstalk/README.md)
 
+## Running the application
+
+### Bash commands
+
+```bash
+    1. npm install
+    2. cd server/
+    3. npm install
+    4. npm run startDev
+    5. cd ..
+    6. cd client/
+    7. npm install
+    8. npm run start
+```
+
+### Steps in details
+
+1. run npm install into the root to create/update package.json files
+1. cd into server directory
+1. run npm install into the server directory to create/update package.json files
+1. npm run startDev to run server
+1. **May need to open a new IDE window to run this step** cd .. to go back to the root directory
+1. cd into client directory
+1. run npm install into the client directory to create/update package.json files
+1. npm run start to start client side
 
 ## Learn More
 
