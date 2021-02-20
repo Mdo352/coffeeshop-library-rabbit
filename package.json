@@ -9,7 +9,11 @@
         "yarn": ">=1.22.5"
     },
     "scripts": {
-        "startDev": "cd ./server && npm run server && cd ../client && npm run start"
+        "startDev": "cd ./server && npm run server && cd ../client && npm run start",
+        "build": "cd client && npm run build",
+        "install-client": "cd client && npm install",
+        "heroku-postbuild": "npm run install-client && npm run build",
+        "start": "npm run startDev"
     },
     "eslintConfig": {
         "extends": "react-app"
