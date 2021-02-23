@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+// library.add(
+//     faGithub,
+//     faGoogle,
+//     faFacebook,
+//     faTwitter
+// );
 
 const Container = styled.div.attrs({
     className: 'container',
@@ -21,7 +30,7 @@ class Footer extends Component {
                         <Link to="#"><i className="icon ion-social-instagram" style={{color: 'rgb(255,255,255)'}} /></Link>
                         <Link to="#"><i className="icon ion-social-snapchat" style={{color: 'rgb(255,255,255)'}} /></Link>
                         <Link to="#"><i className="icon ion-social-twitter" style={{color: 'rgb(255,255,255)'}} /></Link>
-                        <Link to="#" style={{color: 'rgb(255,255,255)'}}><i className="icon ion-social-facebook" style={{color: 'rgb(255,255,255)'}} /></Link>
+                        <Link to="#" style={{color: 'rgb(255,255,255)'}}><i className="icon ion-social-facebook" style={{color: 'rgb(255,255,255)'}} /> <FontAwesomeIcon icon="github" /> </Link>
                         <Link to="#" style={{color: 'rgb(255,255,255)'}}><i className="icon ion-social-github" style={{color: 'rgb(255,255,255)'}} /></Link>
                     </div>
 

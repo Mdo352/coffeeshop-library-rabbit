@@ -20,7 +20,7 @@ export default class Cafe extends Component {
             
       <div>
         <div style={{height: 450, background: `url(${JumboBG})`}}>
-          <h1 style={{color: 'rgb(255,255,255)', textAlign: 'center', fontFamily: 'Adamina, serif', marginBottom: 0, opacity: '0.62', fontSize: 40, height: 40, marginTop: '-1px', paddingTop: 95}}>Welcome to the Cafe</h1>
+          <h1 style={{color: '#ffffff', textAlign: 'center', fontFamily: 'Adamina, serif', marginBottom: 0, opacity: '1', fontSize: 40, height: 40, marginTop: '-1px', paddingTop: 95}}>Welcome to the Cafe</h1>
         </div>
 
         <div>
