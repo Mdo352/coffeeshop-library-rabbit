@@ -11,11 +11,12 @@ export default class Home extends Component {
     return (
       <div>
         <div>
-          <div style={{ height: 450, backgroundImage: `url( ${JumboBG} )` }}>
-            <h1 style={{paddingTop: 75, paddingLeft: 45, width: 650, marginTop: '-1px', opacity: '0.59'}}>Welcome to CSCL</h1>
-            <p style={{paddingLeft: 0, width: 450, marginLeft: 95, color: 'rgb(255,255,255)', opacity: '0.56'}}>Bad libraries build collections, good libraries build services, great libraries build communities.<br /></p>
-            <p style={{paddingLeft: 120}}><Link className="btn btn-primary border rounded-pill border-dark" role="button" data-bs-hover-animate="rubberBand" style={{marginLeft: 95, background: 'rgb(84,29,5)', opacity: '0.86'}}>Learn more</Link></p>
-          </div>
+          <div style={{ height: 450, backgroundImage: `url( ${JumboBG})`, opacity:".9" }}>
+            {/* <h1 style={{paddingTop: 75, paddingLeft: 45, width: 650, marginTop: '-1px', opacity: '0.59'}}>Welcome to CSCL</h1> */}
+            <div style={{paddingTop:75}}><h1 style={{paddingTop: 75, fontSize:60,  width: 650,  marginTop: '-1px', marginLeft:700, color:"#ffffff"}}>Welcome to CSCL</h1>
+            {/* <p style={{paddingLeft: 120, width: 450, marginLeft: 95, color: 'rgb(255,255,255)', opacity: '0.56'}}>Bad libraries build collections, good libraries build services, great libraries build communities.<br /></p> */}
+            <p style={{paddingLeft: 120, paddingTop:35,}}><Link className="btn btn-primary border rounded-pill border-dark" role="button" data-bs-hover-animate="rubberBand" style={{marginLeft: 95, background: 'rgb(84,29,5)', opacity: '0.86'}}>Learn more</Link></p>
+          </div></div>
 
           <div style={{marginTop: 25}}>
             <div className="container">
@@ -31,26 +32,6 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-
-          {/* <div className="footer-basic" style={{background: 'rgb(84,29,5)', paddingTop: 0, marginTop: 100}}>
-            <footer>
-              <div className="social" style={{fontSize: '24p'}}>
-                <Link to="#"><i className="icon ion-social-instagram" style={{color: 'rgb(255,255,255)'}} /></Link>
-                <Link to="#"><i className="icon ion-social-snapchat" style={{color: 'rgb(255,255,255)'}} /></Link>
-                <Link to="#"><i className="icon ion-social-twitter" style={{color: 'rgb(255,255,255)'}} /></Link>
-                <Link to="#" style={{color: 'rgb(255,255,255)'}}><i className="icon ion-social-facebook" style={{color: 'rgb(255,255,255)'}} /></Link>
-                <Link to="#" style={{color: 'rgb(255,255,255)'}}><i className="icon ion-social-github" style={{color: 'rgb(255,255,255)'}} /></Link>
-              </div>
-              <ul className="list-inline">
-                <li className="list-inline-item"><Link to="/home" style={{color: 'rgb(255,255,255)'}}>Home</Link></li>
-                <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>View Code</Link></li>
-                <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>About</Link></li>
-                <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Terms</Link></li>
-                <li className="list-inline-item"><Link to="#" style={{color: 'rgb(255,255,255)'}}>Privacy Policy</Link></li>
-              </ul>
-              <p className="copyright" style={{color: 'rgb(255,255,255)'}}>Company Name © 2017</p>
-            </footer>
-          </div> */}
 
         </div>
       </div>
